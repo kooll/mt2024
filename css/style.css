@@ -1,0 +1,390 @@
+@charset "UTF-8";
+/* -------------------- 共通のCSS ----------------------- */
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  opacity: 0.8;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+section {
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto 300px auto;
+}
+
+/* -------------------- レイアウト ----------------------- */
+.ly-cont {
+  padding: 0 7%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+/*---------------------- 文字 ----------------------- */
+
+.section-title {
+  color: #EA5A71;
+  border-bottom: #EA5A71 2px solid;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  margin-bottom: 100px;
+}
+
+.subheading-300 {
+  text-align: left;
+  font-size: 1.25rem;
+  letter-spacing: 0.12rem;
+}
+
+
+/* --------------------- ビデオ ----------------------- */
+
+#video {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  top: 0px;
+  left: 0px;
+}
+
+/* -------------------- ヘッダー ----------------------- */
+#header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #EA5A71;
+  align-items: center;
+  margin: 0 auto;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+#header .site-title {
+  width: 180px;
+  line-height: 1px;
+  padding: 10px 0;
+  margin-left: 7%;
+}
+#header .site-title a {
+  display: block;
+}
+#header ul {
+  display: flex;
+  padding: 10px 0;
+  margin-right: 100px;
+}
+#header ul li {
+  font-size: 1.25rem;
+  margin-left: 93px;
+}
+#header ul li a {
+  color: #fff;
+  font-family: Arial;
+}
+#header ul li a:hover {
+  opacity: 0.7;
+}
+
+
+/* --------------------- メインビジュアル（カルーセル） -------------------- */
+#main-visual {
+  position: relative;
+}
+#main-visual .slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+#main-visual .slider .slider-item{
+  max-width: 1168px;
+  margin-bottom: 300px;
+  padding-top: 83px;
+  transition: transform 0.5s ease;
+}
+
+#main-visual .btn {
+  width: 100px;
+  height: 100px;
+  z-index: 5;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-100%); /* 垂直方向の中央揃えを実現 */
+  background: none; /* 背景を透明に */
+  border: none; /* ボタンの枠を消す */
+  padding: 0; /* ボタンの内側余白を消す */
+  opacity: 0.7;
+}
+
+#main-visual .btn-left {
+  left: 50px; /* 左側に配置 */
+  transform: translate(-50%, -50%) scale(-1, 1); /* 左ボタンを反転 */
+}
+#main-visual .btn-right {
+  right: 50px; /* 右側に配置 */
+  transform: translate(50%, -50%); /* 垂直方向に中央 */
+}
+
+
+/* ------------------------- news --------------------------- */
+
+#news {
+  text-align: center;
+}
+#news .news-items {
+  display: flex;
+  justify-content: space-between;
+}
+#news .news-items .news-item {
+  max-width: 300px;
+  text-align: left;
+}
+#news .news-items .news-item-04 {
+  display: none;
+}
+
+/* --------------------- outline --------------------- */
+#outline .subheading-300 > span {
+  font-weight: 600;
+}
+
+/* ------------------- contest-2024 ----------------------- */
+#contest-2024 .tsuda-umeko  {
+  margin-right: 100px;
+}
+#contest-2024 .tsuda-umeko img {
+  max-width: 300px;
+  height: 500px;
+  object-fit: cover;
+}
+
+#contest-2024 .contest-2024-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ------------------- contest-summary ------------------- */
+#contest-summary .contest-summary-items {
+  display: flex;
+  justify-content: space-between;
+}
+#contest-summary .contest-summary-items .contest-summary-item {
+  max-width: 300px;
+  height: 300px;
+  border: #EA5A71 2px solid;
+  background-image: url("../img/hanafubuki.jpeg");
+}
+#contest-summary .contest-summary-items .contest-summary-item > span {
+  font-family: Arial;
+  border: #EA5A71 2px solid;
+  padding: 10px 14px;
+  position: relative;
+  top: 5px;
+  left: -129px;
+}
+#contest-summary .contest-summary-items .contest-summary-item > h4 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+#contest-summary .contest-summary-items .contest-summary-item > .subheading{
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* ------------------- contest-importants ---------------------- */
+#contest-importants .contest-importants-item {
+  margin-bottom: 40px;
+}
+#contest-importants .contest-importants-item .sub-title {
+  text-align: left;
+}
+
+/* -------------------- example-work -------------------------- */
+#example-work .example-work-item {
+  margin-bottom: 40px;
+}
+#example-work .example-work-item .sub-title {
+  text-align: left;
+}
+
+/* -------------------- explain-file ------------------------- */
+
+#explain-file a {
+  border-bottom: #1A0DAB 1px solid;
+  color: #1A0DAB;
+}
+
+/* --------------------- page-top ----------------------- */
+
+#page-top h2 a {
+  width: 100%;
+  background-color: #EA5A71;
+  height: 100px;
+  display: block;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+}
+
+/* -------------------- footer ---------------------- */
+#footer {
+  height: 200px;
+  background-color: white;
+}
+#footer h3 {
+  padding: 20px 0 30px 0;
+  text-align: center;
+}
+#footer ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 577px;
+  margin: 0 auto 30px auto;
+}
+#footer p {
+  text-align: center;
+}
+
+/* ------------------------- メディアクエリ -------------------- */
+
+@media screen and (min-width: 1024px) and (max-width: 1280px){
+  #header ul li {
+    font-size: 1.1rem;
+    margin-left: 70px;
+  }
+
+  #news .news-items .news-item {
+    max-width: 250px;
+    text-align: left;
+  }
+
+
+  #main-visual .slider .slider-item{
+    max-width: 1168px;
+    margin-bottom: 300px;
+    padding-top: 93px;
+    transition: transform 0.5s ease;
+  }
+
+  #contest-summary .contest-summary-items .contest-summary-item {
+    max-width: 250px;
+    height: 250px;
+    border: #EA5A71 2px solid;
+    background-image: url("../img/hanafubuki.jpeg");
+  }
+  #contest-summary .contest-summary-items .contest-summary-item > span {
+    font-family: Arial;
+    border: #EA5A71 2px solid;
+    padding: 10px 14px;
+    position: relative;
+    top: 5px;
+    left: -104px;
+  }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  #main-visual .btn {
+    top: 35%;
+  }
+
+  #header ul li {
+    font-size: 1rem;
+    margin-left: 40px;
+  }
+
+  #news .news-items .news-item {
+    max-width: 200px;
+    text-align: left;
+  }
+
+
+  #main-visual .slider .slider-item{
+    max-width: 1168px;
+    margin-bottom: 300px;
+    padding-top: 93px;
+    transition: transform 0.5s ease;
+  }
+
+
+  #contest-summary .contest-summary-items .contest-summary-item {
+    max-width: 200px;
+    height: 250px;
+    border: #EA5A71 2px solid;
+    background-image: url("../img/hanafubuki.jpeg");
+  }
+  #contest-summary .contest-summary-items .contest-summary-item > span {
+    font-family: Arial;
+    border: #EA5A71 2px solid;
+    padding: 10px 14px;
+    position: relative;
+    top: 5px;
+    left: -79px;
+  }
+
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  #header {
+    background-color: #333;
+  }
+  #main-visual .btn {
+    top: 35%;
+  }
+
+  #header ul li {
+    font-size: 1rem;
+    margin-left: 40px;
+  }
+
+  #news .news-items .news-item {
+    max-width: 200px;
+    text-align: left;
+  }
+  #news .news-items .news-item .last-child {
+    display: none;
+  }
+
+
+  #main-visual .slider .slider-item{
+    max-width: 1168px;
+    margin-bottom: 300px;
+    padding-top: 87px;
+    transition: transform 0.5s ease;
+  }
+
+
+  #contest-summary .contest-summary-items .contest-summary-item {
+    max-width: 200px;
+    height: 250px;
+    border: #EA5A71 2px solid;
+    background-image: url("../img/hanafubuki.jpeg");
+  }
+  #contest-summary .contest-summary-items .contest-summary-item > span {
+    font-family: Arial;
+    border: #EA5A71 2px solid;
+    padding: 10px 14px;
+    position: relative;
+    top: 5px;
+    left: -79px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 480px){
+
+}
