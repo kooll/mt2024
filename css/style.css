@@ -13,7 +13,7 @@ a {
   color: #333;
 }
 a:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 img {
   max-width: 100%;
@@ -76,7 +76,8 @@ section {
   z-index: 5;
 }
 #header .site-title {
-  width: 180px;
+  object-fit: cover;
+  width: 240px;
   line-height: 1px;
   padding: 10px 0;
   margin-left: 7%;
@@ -84,6 +85,11 @@ section {
 #header .site-title a {
   display: block;
 }
+
+#header nav .humburger{
+  display: none;
+}
+
 #header ul {
   display: flex;
   padding: 10px 0;
@@ -100,6 +106,49 @@ section {
 #header ul li a:hover {
   opacity: 0.7;
 }
+
+/* -------------------- ハンバーガーメニュー ----------------------- */
+.humburger {
+  display: none;
+}
+.humburger-tojiru {
+  display: none;
+}
+
+
+
+.humburger-menu {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.3s ease-in-out;
+  background-color: #EA5A71;
+  opacity: 0.9;
+}
+
+.humburger-menu.open {
+  transform: translate3d(0, 0, 0);
+}
+
+.humburger-menu nav ul {
+  padding-top: 150px;
+}
+
+.humburger-menu nav ul li {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  z-index: 11;
+}
+.humburger-menu nav ul li a {
+  color: #fff ;
+}
+
 
 
 /* --------------------- メインビジュアル（カルーセル） -------------------- */
@@ -271,7 +320,7 @@ section {
   }
 
   #news .news-items .news-item {
-    max-width: 250px;
+    max-width: 275px;
     text-align: left;
   }
 
@@ -301,6 +350,13 @@ section {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
+
+  section {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 250px auto;
+  }
+
   #main-visual .btn {
     top: 35%;
   }
@@ -311,7 +367,7 @@ section {
   }
 
   #news .news-items .news-item {
-    max-width: 200px;
+    max-width: 215px;
     text-align: left;
   }
 
@@ -325,7 +381,7 @@ section {
 
 
   #contest-summary .contest-summary-items .contest-summary-item {
-    max-width: 200px;
+    max-width: 215px;
     height: 250px;
     border: #EA5A71 2px solid;
     background-image: url("../img/hanafubuki.jpeg");
@@ -336,14 +392,39 @@ section {
     padding: 10px 14px;
     position: relative;
     top: 5px;
-    left: -79px;
+    left: -87px;
   }
 
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  #header {
-    background-color: #333;
+@media screen and (min-width: 500px) and (max-width: 768px) {
+/* ------------- ハンバーガーメニュー実装 ------------- */
+
+
+  #header ul {
+    display: none;
   }
+
+  .humburger {
+    display: block;
+  }
+  #header .humburger{
+    position: relative;
+    padding: 10px 0;
+    width: 70px;
+    z-index: 7;
+    right: -25%;
+    margin-right: 10px;
+  }
+
+  .humburger-menu .humburger-tojiru{
+    position: relative;
+    padding: 10px 0;
+    width: 80px;
+    z-index: 7;
+    right: -40%;
+    margin-right: 10px;
+  }
+
   #main-visual .btn {
     top: 35%;
   }
@@ -353,8 +434,14 @@ section {
     margin-left: 40px;
   }
 
+  #news .news-items {
+    display: block;
+  }
+
   #news .news-items .news-item {
-    max-width: 200px;
+    margin: 0 auto;
+    max-width: 300px;
+    margin-bottom: 30px;
     text-align: left;
   }
   #news .news-items .news-item .last-child {
@@ -370,11 +457,29 @@ section {
   }
 
 
+  #contest-2024 .tsuda-umeko {
+    margin-right: 0;
+    margin: 0 auto;
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  #contest-2024 .tsuda-umeko .subheading-300 {
+    text-align: left;
+  }
+  #contest-2024 .contest-2024-item {
+    display: block;
+  }
+
+  #contest-summary .contest-summary-items {
+    display: block;
+  }
+
   #contest-summary .contest-summary-items .contest-summary-item {
-    max-width: 200px;
-    height: 250px;
+    max-width: 300px;
+    height: 300px;
     border: #EA5A71 2px solid;
     background-image: url("../img/hanafubuki.jpeg");
+    margin: 0 auto 30px auto;
   }
   #contest-summary .contest-summary-items .contest-summary-item > span {
     font-family: Arial;
@@ -382,9 +487,101 @@ section {
     padding: 10px 14px;
     position: relative;
     top: 5px;
-    left: -79px;
+    left: -129px;
+  }
+  #footer ul{
+    width: 700px;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 480px){
+@media screen and (min-width: 320px) and (max-width: 500px){
+  #header ul {
+    display: none;
+  }
+
+  .humburger {
+    display: block;
+  }
+  #header .humburger{
+    position: relative;
+    padding: 10px 0;
+    width: 70px;
+    z-index: 7;
+    right: -25%;
+    margin-right: 10px;
+  }
+
+  .humburger-menu .humburger-tojiru{
+    position: relative;
+    padding: 10px 0;
+    width: 80px;
+    z-index: 7;
+    right: -40%;
+    margin-right: 10px;
+  }
+
+  #main-visual .btn {
+    top: 35%;
+  }
+
+  #header ul li {
+    font-size: 1rem;
+    margin-left: 40px;
+  }
+
+  #news .news-items {
+    display: block;
+  }
+
+  #news .news-items .news-item {
+    margin: 0 auto;
+    max-width: 300px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  #news .news-items .news-item .last-child {
+    display: none;
+  }
+
+
+  #main-visual .slider .slider-item{
+    max-width: 1168px;
+    margin-bottom: 300px;
+    padding-top: 87px;
+    transition: transform 0.5s ease;
+  }
+
+
+  #contest-2024 .tsuda-umeko {
+    margin-right: 0;
+    margin: 0 auto;
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  #contest-2024 .tsuda-umeko .subheading-300 {
+    text-align: left;
+  }
+  #contest-2024 .contest-2024-item {
+    display: block;
+  }
+
+  #contest-summary .contest-summary-items {
+    display: block;
+  }
+
+  #contest-summary .contest-summary-items .contest-summary-item {
+    max-width: 300px;
+    height: 300px;
+    border: #EA5A71 2px solid;
+    background-image: url("../img/hanafubuki.jpeg");
+    margin: 0 auto 30px auto;
+  }
+  #contest-summary .contest-summary-items .contest-summary-item > span {
+    font-family: Arial;
+    border: #EA5A71 2px solid;
+    padding: 10px 14px;
+    position: relative;
+    top: 5px;
+    left: -129px;
+  }
 
 }
