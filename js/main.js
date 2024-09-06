@@ -14,5 +14,17 @@ $(document).ready(function() {
   $('.btn-right').on('click', function() {
     $('.slider').slick('slickNext'); // 一つ次のスライドに移動
   })
+
+  $('.humburger').on('click', function() {
+    $('.humburger-menu').css('transform', 'translate3d(0, 0, 0)')
+    $('.humburger').hide(); // ハンバーガーボタンを隠す
+    $('.humburger-tojiru').show(); // 閉じるボタンを表示
+
+  })
+  $('.humburger-tojiru').on('click', function() {
+    $('.humburger-menu').css('transform', 'translate3d(100%, 0, 0)'); // メニューを隠す
+    $('.humburger').show(); // ハンバーガーボタンを表示
+    $('.humburger-tojiru').hide(); // 閉じるボタンを隠す
+  })
 })
 
