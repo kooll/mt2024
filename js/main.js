@@ -26,5 +26,11 @@ $(document).ready(function() {
     $('.humburger').show(); // ハンバーガーボタンを表示
     $('.humburger-tojiru').hide(); // 閉じるボタンを隠す
   })
-})
 
+  $('.humburger-menu nav ul li a').on('click', function() {
+    // メニューを閉じる処理
+    $('.humburger-menu').css('transform', 'translate3d(100%, 0, 0)'); // メニューを隠す
+    $('.humburger').show(); // ハンバーガーボタンを表示
+    $('.humburger-tojiru').hide(); // 閉じるボタンを隠す
+  })
+})
