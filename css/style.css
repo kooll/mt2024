@@ -26,9 +26,6 @@ section {
   max-width: 980px;
   margin: 0 auto 300px auto;
 }
-#video {
-  pointer-events: none;
-}
 
 /* -------------------- レイアウト ----------------------- */
 .ly-cont {
