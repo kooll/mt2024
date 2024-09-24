@@ -33,4 +33,11 @@ $(document).ready(function() {
     $('.humburger').show(); // ハンバーガーボタンを表示
     $('.humburger-tojiru').hide(); // 閉じるボタンを隠す
   })
+  
+  $(document).ready(function() {
+    // 背景動画のクリックイベントを無効にする
+    $('#video').on('click', function(e) {
+      e.preventDefault(); // デフォルトのクリック動作を防ぐ
+    });
+  });
 })
