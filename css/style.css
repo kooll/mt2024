@@ -42,7 +42,8 @@ section {
   display: inline-block;
   text-align: center;
   letter-spacing: 0.2rem;
-  margin-bottom: 100px;
+  margin-bottom: 50px; /* 変更 */
+  margin-top: 50px;  /* 追加 */
 }
 
 .subheading-300 {
@@ -51,6 +52,9 @@ section {
   letter-spacing: 0.12rem;
 }
 
+.notcenter {
+    text-align: start;
+}
 
 /* --------------------- ビデオ ----------------------- */
 
@@ -324,6 +328,10 @@ section {
 
 @media screen and (min-width: 1024px) and (max-width: 1280px){
 
+  .mobile {
+    display: none;
+  }
+
   section {
     width: 900px;
   }
@@ -364,6 +372,11 @@ section {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
+
+  .mobile {
+    display: none;
+  }
+  
   #header {
     height: 70px;
   }
@@ -421,6 +434,12 @@ section {
 
 }
 @media screen and (min-width: 500px) and (max-width: 768px) {
+
+  .pc {
+    display: none;
+  }
+
+
 /* ------------- ハンバーガーメニュー実装 ------------- */
 #header {
   height: 70px;
@@ -540,6 +559,11 @@ section {
 }
 
 @media screen and (min-width: 300px) and (max-width: 500px){
+
+  .pc {
+    display: none;
+  }
+
   #header {
     height: 70px;
   }
@@ -658,3 +682,4 @@ section {
   }
 
 }
+
