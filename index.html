@@ -48,8 +48,19 @@
       <div id="main-visual">
         <button class="btn btn-left"><img src="./img/757_ar_f.svg" alt=""></button>
         <ul class="slider">
-          <li class="slider-item slider-item01"><img src="./img/top_1.png" alt=""></li>
-          <li class="slider-item slider-item02"><img src="./img/top_2.png" alt=""></li>
+          <ul class="slider">
+          <li class="slider-item slider-item01">
+            <picture>
+                <source media="(max-width: 767px)" srcset="./img/top_1_2.png">
+                <img src="./img/top_1.png" alt="">
+            </picture>
+          </li>
+          <li class="slider-item slider-item02">
+            <picture>
+                <source media="(max-width: 767px)" srcset="./img/top_2_2.png">
+                <img src="./img/top_2.png" alt="">
+            </picture>
+          </li>
           <!--<li class="slider-item slider-item03"><img src="./img/TsudaUmeko.png" alt=""></li>-->
         </ul>
         <button class="btn btn-right"><img src="./img/757_ar_f.svg" alt=""></button>
